@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceccani Winery</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #8b0000;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #a52a2a;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #d2691e;
+        }
+        .container {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section {
+            display: none;
+        }
+        .home, .about, .shop, .contact, .news {
+            display: none;
+        }
+        .home h2, .about h2, .shop h2, .contact h2, .news h2 {
+            color: #8b0000;
+        }
+        .shop a {
+            color: #8b0000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #8b0000;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function showSection(section) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(sec => sec.style.display = 'none');
+            document.querySelector(`.${section}`).style.display = 'block';
+        }
+    </script>
+</head>
+<body onload="showSection('home')">
+
+    <header>
+        <h1>Ceccani Winery</h1>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0)" onclick="showSection('home')">Home</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('about')">About</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('shop')">Shop</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('contact')">Contact</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('news')">News</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="home section">
+            <h2>Welcome to Ceccani Winery</h2>
+            <p>Experience the best wines crafted with passion and dedication. Discover our story, explore our selection, and join our community of wine enthusiasts.</p>
+        </div>
+        <div class="about section">
+            <h2>About Us</h2>
+            <p>Ceccani Winery was founded in the heart of the countryside, where the sun kisses the vineyards and the soil enriches the grapes. Our commitment to quality and tradition has made us a favorite among wine lovers.</p>
+        </div>
+        <div class="shop section">
+            <h2>Shop</h2>
+            <p>Browse our selection of fine wines. From bold reds to crisp whites, we have something for every palate. <a href="#">Visit our shop</a> to see the full range.</p>
+        </div>
+        <div class="contact section">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to learn more about our wines? Reach out to us at:</p>
+            <p>Email: info@ceccaniwinery.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Vineyard Lane, Countryside, Country</p>
+        </div>
+        <div class="news section">
+            <h2>News</h2>
+            <p>Stay updated with the latest news and events from Ceccani Winery. Join our newsletter and follow us on social media for the latest updates.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Ceccani Winery. All rights reserved.
+    </footer>
+
+</body>
+</html>
